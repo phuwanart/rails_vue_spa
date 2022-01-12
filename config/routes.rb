@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  scope :frontend do
+  scope :frontend, as: :frontend do
     get "/", to: "frontend#index", format: false
     get "/*path", to: "frontend#index", format: false
   end
