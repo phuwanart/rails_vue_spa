@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   scope :frontend do
+    get "/", to: "frontend#index", format: false
     get "/*path", to: "frontend#index", format: false
-    root 'frontend#index', as: :frontend_root, format: false
   end
 
   root 'frontend#index'
